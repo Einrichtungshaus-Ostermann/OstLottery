@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+
+        <element type="button">
+            <name>defaultButton</name>
+            <label><![CDATA[<b>Allgemeine Einstellungen</b>]]></label>
+        </element>
+
+        <element type="boolean">
+            <name>shopStatus</name>
+            <label>Shop aktivieren</label>
+            <value>true</value>
+            <description>Soll das Plugin für diesen Shop aktiviert werden?</description>
+        </element>
+
+        <element type="boolean">
+            <name>newsletterStatus</name>
+            <label>Newsletter aktivieren</label>
+            <value>true</value>
+            <description>Soll eine Anmeldung zum Newsletter angezeigt werden?</description>
+        </element>
+
+        <element type="text">
+            <name>redirectUrl</name>
+            <label>Umleitung Url</label>
+            <value>https://www.ostermann.de/</value>
+            <description>Auf welche Seite soll umgeleitet werden, falls keine gültiges Gewinnspiel aktiv ist?</description>
+        </element>
+
+        <element type="button">
+            <name>seoButton</name>
+            <label><![CDATA[<b>SEO Einstellungen</b>]]></label>
+        </element>
+
+        <element type="text">
+            <name>seoUrl</name>
+            <label>SEO Url</label>
+            <value>gewinnspiel</value>
+            <description><![CDATA[Hier können Sie eine SEO Url für Gewinnspiel definieren. Diese Url leitet dann automatisch auf die Plugin Url weiter.<br /><b>Beispiel</b>: gewinnspiel<br />https://www.domain.de/gewinnspiel]]></description>
+        </element>
+
+        <element type="button">
+            <name>termsAndConditionsButton</name>
+            <label><![CDATA[<b>Teilnahmebedingungen Einstellungen</b>]]></label>
+        </element>
+
+        <element type="boolean">
+            <name>termsAndConditionsStatus</name>
+            <label>Teilnahmebedingungen anzeigen</label>
+            <value>true</value>
+            <description>Sollen Teilnahmebedingungen angezeigt werden?</description>
+        </element>
+
+        <element type="textarea">
+            <name>termsAndConditionsText</name>
+            <label>Teilnahmebedingungen</label>
+            <value><![CDATA[Jede natürliche Person, die das 18. Lebensjahr vollendet hat, kann im eigenen Namen teilnehmen - ausgenommen OSTERMANN Mitarbeiter und deren Angehörige. Eine Teilnahme über Dritte ist nicht gestattet. Gewinne können nicht an Dritte übertragen werden. Jeder Teilnehmer darf nur einmal teilnehmen. Die Barauszahlung der Gewinne ist nicht möglich. Einsendeschluss ist der 10.11.2018. Die Gewinner werden schriftlich, telefonisch oder per E-Mail benachrichtigt. Die Ermittlung der Gewinner erfolgt durch die OSTERMANN Gewinnspieljury. Der Rechtsweg ist ausgeschlossen. OSTERMANN behält sich das Recht vor, Teilnehmer, die gegen diese Teilnahmebedingungen verstoßen, jederzeit vom Gewinnspiel auszuschließen. Informationen zum Datenschutz und dem Umgang mit Ihren Daten erhalten Sie in unserer <a href="https://www.ostermann.de/datenschutz" target="_blank">Datenschutzerklärung</a>.]]></value>
+            <description>Die Teilnahmebedingungen als HTML.</description>
+        </element>
+
+    </elements>
+</config>

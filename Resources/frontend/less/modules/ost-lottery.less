@@ -1,0 +1,149 @@
+/**
+ * Einrichtungshaus Ostermann GmbH & Co. KG - Lottery
+ *
+ * @package   OstLottery
+ *
+ * @author    Eike Brandt-Warneke <e.brandt-warneke@ostermann.de>
+ * @copyright 2019 Einrichtungshaus Ostermann GmbH & Co. KG
+ * @license   proprietary
+ */
+
+
+body.is--ctl-ostlottery.is--act-index {
+
+    div.content.ost-lottery--content {
+
+
+        form {
+
+            > div {
+                margin-bottom: 10px;
+
+
+            }
+
+
+            div.image--container {
+                img {
+                    margin: auto;
+                }
+            }
+
+
+
+            div.lottery--container {
+                div.fieldset {
+                    width: 50%;
+
+                    & > div {
+                        margin-bottom: 15px;
+                    }
+
+                    & > div:last-child {
+                        margin-bottom: 0;
+                    }
+
+
+                    div.field--text {
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+
+                    div.field--textarea {
+                        textarea {
+                            width: 100%;
+                        }
+                    }
+
+                }
+            }
+
+
+
+            div.participant--container {
+
+                div.participant-form > div {
+                    margin-bottom: 15px;
+                }
+                div.participant-form > div:last-child {
+                    margin-bottom: 0;
+                }
+
+
+
+                div.participant-form {
+                    width: 50%;
+
+                    input {
+                        width: 100%;
+                    }
+
+                    input.register--field-zipcode,
+                    input.register--field-city {
+                        float: left;
+                    }
+
+                    input.register--field-zipcode {
+                        width: ~"calc(30% - 15px)";
+                        margin-right: 15px;
+                    }
+                    input.register--field-city {
+                        width: 70%;
+                    }
+                }
+
+
+
+            }
+
+
+            div.disclaimer--container {
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+
+            div.action--container {
+                margin-bottom: 0;
+
+                button {
+                    float: right;
+                }
+            }
+
+        }
+
+
+
+
+
+
+    }
+
+
+
+}
+
+
+
+
+body.is--ctl-ostlottery.is--act-finish {
+
+    div.content.ost-lottery--content {
+
+
+        div.finish--container {
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+
+    }
+
+
+
+}
