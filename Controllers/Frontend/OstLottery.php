@@ -113,13 +113,25 @@ class Shopware_Controllers_Frontend_OstLottery extends Enlight_Controller_Action
                 switch ($field['type']) {
                     case 'text':
                     case 'textarea':
-                        $input[$field['id']] = $field['name'] . ': ' . (string) $this->request->getParam('ost-lottery--id-' . $field['id']);
+                        $input[$field['id']] = array(
+                            'question' => $field['name'],
+                            'type' => $field['type'],
+                            'value' => (string) $this->request->getParam('ost-lottery--id-' . $field['id'])
+                        );
                         break;
                     case 'radio':
-                        $input[$field['id']] = $field['name'] . ': ' . (string) $this->request->getParam('ost-lottery--id-' . $field['id']);
+                        $input[$field['id']] = array(
+                            'question' => $field['name'],
+                            'type' => $field['type'],
+                            'value' => (string) $this->request->getParam('ost-lottery--id-' . $field['id'])
+                        );
                         break;
                     case 'checkbox':
-                        $input[$field['id']] = $field['name'] . ': ' . (string) implode(',', (array) $this->request->getParam('ost-lottery--id-' . $field['id']));
+                        $input[$field['id']] = array(
+                            'question' => $field['name'],
+                            'type' => $field['type'],
+                            'value' => (array) $this->request->getParam('ost-lottery--id-' . $field['id'])
+                        );
                         break;
                 }
             }
@@ -145,7 +157,7 @@ class Shopware_Controllers_Frontend_OstLottery extends Enlight_Controller_Action
                 $participant->setCountryId(null);
 
                 // set input values
-                $participant->setInput(empty($input) ? null : implode(';', $input));
+                $participant->setInput(empty($input) ? null : json_encode($input));
 
                 // set 1:n
                 $participant->setLottery($this->getModelManager()->find(Lottery::class, $lottery['id']));

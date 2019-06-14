@@ -8,9 +8,13 @@
  * 1.0.0
  * - initial release
  *
+ * 1.1.0
+ * - fixed radio and checkbox css
+ * - changed saved answers to json encoded array
+ * - added responsive css
+ * - added rudimentary backend app
+ *
  * @todo backend app
- * @todo responsive css
- * @todo lottery radio and checkboxes css
  * @todo form element for country selection
  *
  * @package   OstLottery

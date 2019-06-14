@@ -8,28 +8,18 @@
  * @license   proprietary
  */
 
-
 body.is--ctl-ostlottery.is--act-index {
-
     div.content.ost-lottery--content {
-
-
         form {
-
             > div {
                 margin-bottom: 10px;
-
-
             }
-
 
             div.image--container {
                 img {
                     margin: auto;
                 }
             }
-
-
 
             div.lottery--container {
                 div.fieldset {
@@ -43,13 +33,11 @@ body.is--ctl-ostlottery.is--act-index {
                         margin-bottom: 0;
                     }
 
-
                     div.field--text {
                         input {
                             width: 100%;
                         }
                     }
-
 
                     div.field--textarea {
                         textarea {
@@ -57,21 +45,32 @@ body.is--ctl-ostlottery.is--act-index {
                         }
                     }
 
+                    div.field--checkbox {
+                        div.checkbox-element {
+                            input {
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+
+                    div.field--radio {
+                        div.radio-element {
+                            input {
+                                margin-right: 8px;
+                            }
+                        }
+                    }
                 }
             }
 
-
-
             div.participant--container {
-
                 div.participant-form > div {
                     margin-bottom: 15px;
                 }
+
                 div.participant-form > div:last-child {
                     margin-bottom: 0;
                 }
-
-
 
                 div.participant-form {
                     width: 50%;
@@ -93,18 +92,13 @@ body.is--ctl-ostlottery.is--act-index {
                         width: 70%;
                     }
                 }
-
-
-
             }
-
 
             div.disclaimer--container {
                 p {
                     margin-bottom: 0;
                 }
             }
-
 
             div.action--container {
                 margin-bottom: 0;
@@ -113,37 +107,36 @@ body.is--ctl-ostlottery.is--act-index {
                     float: right;
                 }
             }
-
         }
-
-
-
-
-
-
     }
-
-
-
 }
 
-
-
-
 body.is--ctl-ostlottery.is--act-finish {
-
     div.content.ost-lottery--content {
-
-
         div.finish--container {
             p {
                 margin-bottom: 0;
             }
         }
-
-
     }
+}
 
-
-
+// make everything 100% width on lower resolutons
+@media screen and(max-width: @tabletViewportWidth) {
+    body.is--ctl-ostlottery.is--act-index {
+        div.content.ost-lottery--content {
+            form {
+                div.lottery--container {
+                    div.fieldset {
+                        width: 100%;
+                    }
+                }
+                div.participant--container {
+                    div.participant-form {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

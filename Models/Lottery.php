@@ -241,10 +241,14 @@ class Lottery extends ModelEntity
     /**
      * Setter method for the property.
      *
-     * @param DateTime $startDate
+     * @param mixed $startDate
      */
-    public function setStartDate(DateTime $startDate)
+    public function setStartDate($startDate)
     {
+        if ($startDate instanceof DateTime) {
+            $startDate = new DateTime($startDate);
+        }
+
         $this->startDate = $startDate;
     }
 
@@ -261,10 +265,13 @@ class Lottery extends ModelEntity
     /**
      * Setter method for the property.
      *
-     * @param DateTime $endDate
+     * @param mixed $endDate
      */
-    public function setEndDate(DateTime $endDate)
+    public function setEndDate($endDate)
     {
+        if ($endDate instanceof DateTime) {
+            $endDate = new DateTime($endDate);
+        }
         $this->endDate = $endDate;
     }
 
