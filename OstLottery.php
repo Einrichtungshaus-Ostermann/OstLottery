@@ -17,6 +17,9 @@
  * 1.1.1
  * - fixed datetime conversion in lottery model
  *
+ * 1.1.2
+ * - forced valid start- and end-date for newly created lotteries
+ *
  * @todo backend app
  * @todo form element for country selection
  *

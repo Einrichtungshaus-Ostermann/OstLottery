@@ -16,6 +16,7 @@ use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Shopware\Components\Model\ModelEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="Repository")
@@ -66,6 +67,8 @@ class Lottery extends ModelEntity
      *
      * @var \DateTime
      *
+     * @Assert\DateTime()
+     *
      * @ORM\Column(name="startDate", type="datetime", nullable=false)
      */
     private $startDate;
@@ -74,6 +77,8 @@ class Lottery extends ModelEntity
      * ...
      *
      * @var \DateTime
+     *
+     * @Assert\DateTime()
      *
      * @ORM\Column(name="endDate", type="datetime", nullable=false)
      */
@@ -156,6 +161,8 @@ class Lottery extends ModelEntity
         // set defaults
         $this->fields = new ArrayCollection();
         $this->participants = new ArrayCollection();
+        $this->startDate = new DateTime();
+        $this->endDate = new DateTime();
     }
 
     /**
