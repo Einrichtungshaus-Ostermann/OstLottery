@@ -245,7 +245,7 @@ class Lottery extends ModelEntity
      */
     public function setStartDate($startDate)
     {
-        if ($startDate instanceof DateTime) {
+        if (!$startDate instanceof DateTime) {
             $startDate = new DateTime($startDate);
         }
 
@@ -269,7 +269,7 @@ class Lottery extends ModelEntity
      */
     public function setEndDate($endDate)
     {
-        if ($endDate instanceof DateTime) {
+        if (!$endDate instanceof DateTime) {
             $endDate = new DateTime($endDate);
         }
         $this->endDate = $endDate;

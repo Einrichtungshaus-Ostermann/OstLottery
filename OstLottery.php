@@ -14,6 +14,9 @@
  * - added responsive css
  * - added rudimentary backend app
  *
+ * 1.1.1
+ * - fixed datetime conversion in lottery model
+ *
  * @todo backend app
  * @todo form element for country selection
  *
