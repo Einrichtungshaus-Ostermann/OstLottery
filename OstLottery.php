@@ -20,6 +20,9 @@
  * 1.1.2
  * - forced valid start- and end-date for newly created lotteries
  *
+ * 1.1.3
+ * - fixed faulty start- and end-date input fields
+ *
  * @todo backend app
  * @todo form element for country selection
  *

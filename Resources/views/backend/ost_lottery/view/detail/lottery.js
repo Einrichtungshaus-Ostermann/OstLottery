@@ -13,8 +13,8 @@ Ext.define('Shopware.apps.OstLottery.view.detail.Lottery', {
                     active: 'Status',
                     name: 'Name',
                     banner: 'Banner',
-                    startDate: 'Startzeitpunkt',
-                    endDate: 'Endzeitpunkt',
+                    startDate: { fieldLabel: "Startzeitpunkt", xtype: "datefield", format: 'Y-m-d' },
+                    endDate: { fieldLabel: "Endzeitpunkt", xtype: "datefield", format: 'Y-m-d' }
                 }
             },
 
